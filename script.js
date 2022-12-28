@@ -24,7 +24,7 @@ container.classList.add('container');//gave the div a class
 document.body.appendChild(container);//adding our container to the div
 
 
-
+ //container attribute set
 container.setAttribute('style','margin:30px 30vw 30px;display:grid;grid-template-columns:repeat(16,10px);grid-template-rows:repeat(16,10px);');
 for(let i=0;i<256;i++){
     const initSquare=document.createElement('div');
