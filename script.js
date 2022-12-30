@@ -11,21 +11,20 @@ document.body.insertBefore(btnHolder,emptyDiv);
 
 //button to reset the screen before insertion of a new number
 const rstBtn=document.createElement('button');
-rstBtn.setAttribute('style','width:80px;height:40px;margin:5px;padding:auto;');
+rstBtn.setAttribute('style','width:80px;height:40px;margin:5px;padding:auto;border-radius:5px;color:white;background-color:crimson');
 rstBtn.textContent="RESET";
 btnHolder.appendChild(rstBtn);
 
 //button to enter a number to be squared
 const setBtn=document.createElement('button');//adding button to our div
 setBtn.textContent="INSERT";//adding text content to our button
-setBtn.setAttribute('style','width:80px;height:40px;margin:5px;padding:auto;');//styling our button
+setBtn.setAttribute('style','width:80px;height:40px;margin:5px;padding:auto;border-radius:5px;color:white;background-color:teal;');//styling our button
 btnHolder.appendChild(setBtn);
 
 //div to hold initial grid squares
 let container=document.createElement("div");//create a new div to contain the grid squares
 container.classList.add('container');//gave the div a class
 document.body.appendChild(container);//adding our container to the div
-
 
  //container styling
 container.setAttribute('style','display:grid;grid-template-columns:repeat(16,10px);grid-template-rows:repeat(16,10px);');
@@ -34,7 +33,7 @@ container.setAttribute('style','display:grid;grid-template-columns:repeat(16,10p
 for(let i=0;i<256;i++){
     const initSquare=document.createElement('div');
     initSquare.classList.add('init');
-    initSquare.setAttribute('style','border:0.01px solid green;');
+    initSquare.setAttribute('style','border:0.01px solid grey;');
     container.appendChild(initSquare);
     initSquare.addEventListener('mouseover',()=>{
         changeColor(initSquare);
@@ -52,7 +51,7 @@ function noOfSquare(number){
        let divSquare=document.createElement('div');
        divSquare.classList.add('box');
         newContainer.appendChild(divSquare);
-        divSquare.setAttribute('style','border:0.01px solid green;');
+        divSquare.setAttribute('style','border:0.01px solid grey;');
         //adding event listener to add color to the new divsquares
         divSquare.addEventListener('mouseover',()=>{
             changeColor(divSquare);
